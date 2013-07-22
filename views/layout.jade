@@ -1,0 +1,34 @@
+!!!5
+html
+    head
+        meta( charset='utf-8' )
+        link( type='image/x-icon', rel='icon', href='/favicon.ico' )
+        link( type='image/x-icon', rel='shortcut icon', href='/favicon.ico' )
+        title #{data.title}
+        link(rel='stylesheet', href='/css/style.css')
+    body
+        div(id="fb-root")
+        script.
+            window.fbAsyncInit = function() {
+                FB.init({
+                    appId      : '#{data.facebook.app.id}',
+                    status     : true,
+                    xfbml      : true
+                });
+                FB.Canvas.setSize({ height: 895 });
+
+                FB.api('/me/permissions', checkAppUserPermissions);
+
+                    function checkAppUserPermissions(response) {
+                        console.log("User permissions response", JSON.stringify(response));
+                    }
+            };
+
+            (function(d, s, id){
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) {return;}
+            js = d.createElement(s); js.id = id;
+            js.src = "//connect.facebook.net/es_ES/all.js";
+            fjs.parentNode.insertBefore(js, fjs);
+                }(document, 'script', 'facebook-jssdk'));
+        block content

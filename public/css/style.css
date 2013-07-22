@@ -1,0 +1,53 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: arial;
+}
+
+a{
+    outline: 0;
+    text-decoration: none;
+}
+
+a:hover{
+    text-decoration: none;
+}
+
+.home{
+    width: 810px;
+    height: 895px;
+    position: relative;
+    overflow: hidden;
+    background-image: url('../img/home.jpg');
+    background-repeat: no-repeat;
+}
+
+.like{
+    width: 810px;
+    height: 895px;
+    position: relative;
+    overflow: hidden;
+    background-image: url('../img/like.jpg');
+    background-repeat: no-repeat;
+}
+
+.main{
+    position: absolute;
+    top: 298px;
+    left: 30px;
+    width: 334px;
+}
+
+.button{
+    background-color: #00aee9;
+    color: #ffffff;
+    padding: 10px;
+    width: 324px !important;
+    border: 1px solid #ffffff;
+    margin-bottom: 5px;
+    float: left;
+    font-size: 26px;
+    font-weight: bold;
+    border-bottom-right-radius:  8px;
+    border-top-right-radius: 8px;
+}
